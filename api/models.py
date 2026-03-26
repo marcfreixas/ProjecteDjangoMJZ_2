@@ -36,6 +36,15 @@ class Recurs(models.Model):
         help_text="Indica si el recurs està actiu",
         default=True
     )
+    autor = models.ForeignKey(
+        'Autor',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='recursos',
+        verbose_name="Autor",
+        help_text="Autor del recurs"
+    )
 
     class Meta:
         verbose_name = "Recurs"
