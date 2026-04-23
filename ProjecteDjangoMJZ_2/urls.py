@@ -32,7 +32,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
-    path("recurs/<int:id>/", views.RecursDetailAPIView.as_view(), name="recurs-detail"),
+    path("recurs/<int:pk>/", views.RecursDetailAPIView.as_view(), name="recurs-detail"),
     path("categories/", views.CategoriaRecursAPIView.as_view(), name="categoria-recurs"),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
 
